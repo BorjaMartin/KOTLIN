@@ -1,6 +1,9 @@
 package com.example.myfirstapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,10 +16,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recycler: RecyclerView = findViewById(R.id.recycler)
-//        val manager = LinearLayoutManager(this)
-//        recycler.layoutManager = manager
-//        recycler.setHasFixedSize(true)
         recycler.adapter = MediaAdapter(getItems())
+
+        val buttonNext: Button = findViewById(R.id.buttonNext);
+        buttonNext.setOnClickListener {
+            val intent = Intent(this, test::class.java).apply {
+                toast("Go Test activity")
+            }
+            startActivity(intent)
+
+        }
+
+        recycler.setOnClickListener { toast("Hello onClick Listener") }
 
     }
 
