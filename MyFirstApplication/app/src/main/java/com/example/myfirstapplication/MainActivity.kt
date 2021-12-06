@@ -1,5 +1,6 @@
 package com.example.myfirstapplication
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -31,9 +32,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
-
-    fun toast (textToast: String) = Toast.makeText(this, textToast, Toast.LENGTH_SHORT).show()
 }
-
-

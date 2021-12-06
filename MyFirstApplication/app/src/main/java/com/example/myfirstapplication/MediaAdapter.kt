@@ -13,9 +13,10 @@ open class MediaAdapter(private val items: List<MediaItem>) :
 
     //Inflaremos la vista
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : ViewHolder {
-        val view = LayoutInflater
-                .from(parent.context)
-                .inflate(R.layout.view_media_item, parent, false)
+        //val view = LayoutInflater
+        //        .from(parent.context)
+        //        .inflate(R.layout.view_media_item, parent, false)
+        val view = parent.parentInflate(R.layout.view_media_item)
         return ViewHolder(view)
     }
 
@@ -35,6 +36,10 @@ open class MediaAdapter(private val items: List<MediaItem>) :
         fun bind(mediaItem: MediaItem){
             title.text = mediaItem.title
             Glide.with(thumb).load(mediaItem.url).into(thumb)
+
+            itemView.setOnClickListener {
+                toastView(mediaItem.title)
+            }
         }
     }
 }
