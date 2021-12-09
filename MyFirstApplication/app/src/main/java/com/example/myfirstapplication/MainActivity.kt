@@ -1,5 +1,6 @@
 package com.example.myfirstapplication
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -21,14 +22,25 @@ class MainActivity : AppCompatActivity() {
 
         val buttonNext: Button = findViewById(R.id.buttonNext);
         buttonNext.setOnClickListener {
+            /*
             val intent = Intent(this, test::class.java).apply {
                 toast("Go Test activity")
             }
             startActivity(intent)
+            */
 
+            //EJEMPLO de Reified
+            //Llamada a un activity normal
+            //val intent = Intent(this, test::class.java)
+            //startActivity(intent)
+
+            //Llamada a un activity utilizando función de extensión y tipos Reified
+            startActivity<test>()
         }
 
         recycler.setOnClickListener { toast("Hello onClick Listener") }
+
+
 
     }
 

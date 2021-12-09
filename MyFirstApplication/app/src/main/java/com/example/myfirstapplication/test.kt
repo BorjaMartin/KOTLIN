@@ -27,8 +27,8 @@ class test : AppCompatActivity(), Logger {
             toast("Hello ${myFirstInputText.text}")
         }
         //Clases y herencia entre clases
-        val p = Person("Borja",29)
-        val d = Developer("Borja Dev", 7)
+        //val p = Person("Borja",29)
+        //val d = Developer("Borja Dev", 7)
 
 
         //Test de prueba de interfaces. En este caso lo utilizamos para crearnos una función que no sirva para imprimir logs repitiendo con menos código
