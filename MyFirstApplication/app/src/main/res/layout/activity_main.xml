@@ -19,4 +19,12 @@
         tools:listitem="@layout/view_media_item"
         />
 
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E91E63"
+        android:text="Go Test Activity"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </FrameLayout>
